@@ -1,6 +1,6 @@
 # primenumbe-rs
 Generate the nth prime number. <br>
-primenumbe-rs algorithm is inspired by the the optimized version of the Sieve of Eratosthenes
+primenumbe-rs algorithm is inspired by the the optimized version of the Sieve of Eratosthenes. Note: limit of n index stands at [1, 1_000_000).
 
 ### Example
 
