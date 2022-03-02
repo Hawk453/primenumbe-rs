@@ -8,7 +8,7 @@ primenumbe-rs algorithm is inspired by the the optimized version of the Sieve of
 use primenumbe_rs::Primenumber;
 
 fn main(){
-    let n: u128 = 100;
+    let n: u64 = 100;
     let result = Primenumber::nthprime(n);
     println!("The {n}th prime is {result}");
 }
