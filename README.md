@@ -1,4 +1,4 @@
-# priemnumbe-rs
+# primenumbe-rs
 Generate the nth prime number. <br>
 primenube-rs algorithm is inspired by the the optimized version of the Sieve of Eratosthenes
 
