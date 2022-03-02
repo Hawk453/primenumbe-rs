@@ -5,6 +5,8 @@ authors = ["Saksham Madan <contact_saksham.unserialize@simplelogin.co>"]
 description = "Generate the nth prime number"
 license = "MIT"
 edition = "2021"
+repository = "https://github.com/Hawk453/primenumbe-rs"
+readme = "README.md"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
