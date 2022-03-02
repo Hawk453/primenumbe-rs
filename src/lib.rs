@@ -1,5 +1,5 @@
 //! Generate the nth prime number.
-//! primenube-rs crate's algorithm is inspired by the the optimized version of the Sieve of Eratosthenes.
+//! primenumbe-rs crate's algorithm is inspired by the the optimized version of the Sieve of Eratosthenes.
 //! 
 /// ```no_run
 /// use primenumbe_rs::Primenumber;
