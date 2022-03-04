@@ -1,6 +1,6 @@
 [package]
 name = "primenumbe-rs"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Saksham Madan <contact_saksham.unserialize@simplelogin.co>"]
 description = "Generate the nth prime number"
 license = "MIT"
