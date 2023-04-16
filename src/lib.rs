@@ -2,37 +2,37 @@
 //! # Algorithm
 //! primenumbe-rs crate's algorithm is inspired by the the optimized version of the Sieve of Eratosthenes.
 //!
-/// ```no_run
+/// '''no_run
 /// use primenumbe_rs::Primenumber;
-/// ```
+/// '''
 /// # Example
 ///
-/// ```no_run
+/// '''no_run
 ///
 /// let n: u64 = 100;
 /// let result = Primenumber::nthprime(n);
 /// assert_eq!(result, 541u64);
-/// ```
+/// '''
 ///
 
-pub struct Primenumber {
-    num: u64,
+pub struct Primenumber<T> {
+    num: T,
 }
 
-impl Primenumber {
-    pub fn nthprime(n: u64) -> u64 {
+impl<T: Into<u64> + Copy> Primenumber<T> {
+    pub fn nthprime(n: T) -> u64 {
         get_nth_prime(&Primenumber { num: n })
     }
 }
 
-pub fn get_nth_prime(nth: &Primenumber) -> u64 {
+pub fn get_nth_prime<T: Into<u64> + Copy>(nth: &Primenumber<T>) -> u64 {
     let mut total_prime: u64 = 0;
     let mut size_factor: u64 = 2;
 
-    let mut s: u64 = nth.num * size_factor;
+    let mut s: u64 = nth.num.into() * size_factor;
     let mut primes: Vec<u64> = Vec::new();
 
-    let n: u64 = nth.num;
+    let n: u64 = nth.num.into();
 
     while total_prime < n {
         primes = get_primes(s).to_vec();
@@ -75,12 +75,13 @@ fn count_prime(primes: Vec<u64>, n: u64) -> Option<u64> {
 
 #[cfg(test)]
 mod tests {
-    use crate::Primenumber;
+    use super::*;
 
     #[test]
     fn it_works() {
-        let n: u64 = 100;
+        let n: u16 = 100;
         let result = Primenumber::nthprime(n);
         assert_eq!(result, 541u64);
     }
 }
+
